@@ -8,3 +8,10 @@
 
 5.#CONFIG_SERVER
 
+## Author
+
+- **Name:** George Onchaba
+- **Email:** ggonchaba@gmail.com
+- **GitHub:** https://github.com/gee-cpu
+
+
