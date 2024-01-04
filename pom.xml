@@ -64,22 +64,29 @@
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>3.4.0</version>
-
                 <configuration>
-                    <from><image>openjdk:17</image></from>
+                    <from>
+                        <image>openjdk:17</image>
+                    </from>
                     <to>
-                        <image>registry.hub.docker.com/gonchaba/serviceregistry</image>
+                        <image>registry.hub.docker.com/geecpu/serviceregistry</image>
                         <tags>${project.version}</tags>
+                        <auth>
+                            <username>${registry.username}</username>
+                            <password>${registry.password}</password>
+                        </auth>
                     </to>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
                 <configuration>
                     <release>17</release>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
